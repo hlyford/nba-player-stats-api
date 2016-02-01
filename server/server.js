@@ -1,11 +1,17 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+var path = require('path');
+var morgan  = require('morgan')
+
 var router = require('./router');
 
 var port = process.env.PORT || 8000;
 
 var app = express();
 
-// app.use(express.static(path.join(__dirname, "/../client/dist")));
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "/../client")));
 
 app.use('/', router);
 

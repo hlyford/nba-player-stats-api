@@ -3,6 +3,6 @@ Easy-to-use API to retrieve NBA player headshot images (png)
 
 Base url: [forthcoming] 
 
-Route: GET /players/:firstName_lastName
+Route: GET /players/:lastName/:firstName 
 
-e.g. GET [base_url]/steph_curry
+e.g. GET [base_url]/curry/stephen
