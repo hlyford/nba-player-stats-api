@@ -9,7 +9,7 @@ var teamSlugs = require('./url-info').teamSlugs;
 
 var playerList = [];
 
-var getPlayers = function(urlSlug, callback) {
+var getPlayers = function(urlSlug) {
   var shortSlug = urlSlug.slice(0, 2);
   request(baseUrl + urlSlug, function (error, response, html) {
 	  if (!error && response.statusCode == 200) {
