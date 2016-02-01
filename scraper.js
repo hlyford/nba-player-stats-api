@@ -4,10 +4,10 @@ var Scraper = require("image-scraper");
 var fs = require('fs');
 var url = require('url');
 var exec = require('child_process').exec;
-var baseUrl = require('./base-url').baseUrl;
+var baseUrl = require('./url-info').baseUrl;
+var teamSlugs = require('./url-info').teamSlugs;
 
 var playerList = [];
-var teamSlugs = ['gs/golden-state-warriors', 'bos/boston-celtics']; // 'bkn/brooklyn-nets', 'ny/new-york-knicks'];
 
 var getPlayers = function(urlSlug, callback) {
   var shortSlug = urlSlug.slice(0, 2);
