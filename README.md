@@ -1,12 +1,12 @@
 # nba-headshot-api
 Easy-to-use API to retrieve NBA player headshot images (png) 
 
-Base url: [forthcoming] 
+Base url: https://nba-players.herokuapp.com/
 
-Route: GET /players/:lastName  (may return other player with same last name)
+Route: GET /players/:lastName/:firstName   (more specific)
 
 OR
  
-Route: GET /players/:lastName/:firstName   (more specific)
+Route: GET /players/:lastName  (may return other player with same last name)
 
 e.g. GET [base_url]/curry/stephen
