@@ -20,8 +20,7 @@ var getPlayers = function(urlSlug, callback) {
   			var playerName = $(element).first().text();	    
   			var $a = $(element).find('a');	    
   			var playerUrl = $a.attr('href');            
-  			// for each player, make a second request using cheerio
-  			// the new page is the href for the image
+  			// for each player, make a second request using cheerio; new page is href for player image
   			request(playerUrl, function (error, response, html) {
   				if (error) throw error;
 	  			if (!error && response.statusCode == 200) {			  	
@@ -29,7 +28,6 @@ var getPlayers = function(urlSlug, callback) {
 	    			var playerPicUrl = $$('.main-headshot').find('img').attr('src');			    
 	    			if (playerPicUrl !== undefined) {
 		    			playerList.push({name: playerName, imageUrl: playerPicUrl});			  			    				    
-
 		    			// get the images and save them to the images directory				    
 		    			var dlDir = './images/' + shortSlug + '/'  + playerName.replace(/ /g,"_") + '.png';				    		           	
 	      			var curl =  'curl ' + playerPicUrl.replace(/&/g,'\\&') + ' -o ' + dlDir  + ' --create-dirs';
