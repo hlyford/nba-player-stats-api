@@ -41,7 +41,7 @@ router.get('/players/:lastname/:firstname?', function(req, res){
 });
 
 router.get('/*', function(req, res) {
-	res.send('index');
+	res.sendFile('index');
 })
 
 module.exports = router;
