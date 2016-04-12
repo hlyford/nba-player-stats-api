@@ -2,17 +2,25 @@
 <html>
 <head>
 	<title>NBA headshots API</title>
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="styles/style.css" />
 </head>
 <body>
-	# nba-headshot-api <br />
-	Easy-to-use API to retrieve NBA player headshot images (png) <br />
+	<div class="main-container">
+		<div class="main-content">
+		<h1>NBA headshot and salary API </h1>
+		Easy-to-use API to retrieve NBA player headshot images (png) <br />
 
-	Base url: https://nba-players.herokuapp.com/<br />
+		Base url: https://nba-players.herokuapp.com/<br />
 
-	Route: GET /players/:lastName/:firstName   (more specific) <br />
-	OR<br />
-	Route: GET /players/:lastName  (may return other player with same last name) <br />
+		Route: GET /players/:lastName/:firstName   (more specific) <br />
+		OR<br />
+		Route: GET /players/:lastName  (may return other player with same last name) <br />
 
-	e.g. GET https://nba-players.herokuapp.com/players/curry/stephen <br />
+		e.g. GET https://nba-players.herokuapp.com/players/curry/stephen <br />
+		</div>
+	</div>
 </body>
+	<script src="lib/jquery-2.2.0.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>  
 </html>

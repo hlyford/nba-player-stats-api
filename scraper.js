@@ -47,5 +47,3 @@ for (var i = 0; i < teamSlugs.length; i++) {
 	getPlayers(teamSlugs[i]);
 }
 
-var p = 0;
-while ()
