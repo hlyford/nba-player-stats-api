@@ -10,7 +10,7 @@ var teamSlugs = require('./url-info').teamSlugs;
 var playerList = [];
 
 var getPlayers = function(urlSlug, callback) {
-  var shortSlug = urlSlug.slice(0, 2);
+  var shortSlug = urlSlug.slice(0, 3);
   request(baseUrl + urlSlug, function (error, response, html) {
 	  if (!error && response.statusCode == 200) {
 	  	// load the html for the page    
@@ -29,7 +29,7 @@ var getPlayers = function(urlSlug, callback) {
 	    			if (playerPicUrl !== undefined) {
 		    			playerList.push({name: playerName, imageUrl: playerPicUrl});			  			    				    
 		    			// get the images and save them to the images directory				    
-		    			var dlDir = './images/' + shortSlug + '/'  + playerName.replace(/ /g,"_") + '.png';				    		           	
+		    			var dlDir = './images/' + shortSlug + '/'  + playerName.replace(/ /g,"_").replace(/\'/g, '') + '.png';				    		           	
 	      			var curl =  'curl ' + playerPicUrl.replace(/&/g,'\\&') + ' -o ' + dlDir  + ' --create-dirs';
 	      			var child = exec(curl, function(err, stdout, stderr) {
 	          		if (err){ console.log(stderr); throw err; } 
@@ -46,3 +46,4 @@ var getPlayers = function(urlSlug, callback) {
 for (var i = 0; i < teamSlugs.length; i++) {
 	getPlayers(teamSlugs[i]);
 }
+

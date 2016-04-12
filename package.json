@@ -4,6 +4,7 @@
   "description": "Easy to use API to receive NBA player headshots",
   "main": "server/server.js",
   "scripts": {
+    "start": "nodemon server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Henry Lyford",

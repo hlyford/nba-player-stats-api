@@ -1,0 +1,17 @@
+html { 
+  background: url(../images/background1.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.main-container {
+	margin: 5% 10% 0 10%;	
+	padding: 10px;
+	clear: both;
+}
+.main-content {
+	text-align: center;
+
+}
