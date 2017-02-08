@@ -4,8 +4,8 @@
   "description": "Easy to use API to receive NBA player headshots",
   "main": "server/server.js",
   "scripts": {
-    "start": "nodemon server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node_modules/.bin/nodemon server/server.js",
+    "test": "echo \"Error: no tests specified\" && exit 1"
   },
   "author": "Henry Lyford",
   "license": "ISC",
@@ -21,6 +21,9 @@
     "path": "^0.12.7",
     "request": "^2.67.0",
     "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.11.0"
   },
   "engines": {
     "node": "5.2.0"
