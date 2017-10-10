@@ -15,8 +15,8 @@ router.get('/', function(req, res){
 // player image route
 router.get('/players/:lastname/:firstname?', function(req, res){
 
-	var firstname = (req.params.firstname) ? helpers.capitalizeFirstLetter(req.params.firstname.toLowerCase()) : false;
-	var lastname = helpers.capitalizeFirstLetter(req.params.lastname.toLowerCase());	
+	var firstname = (req.params.firstname) ? req.params.firstname.toLowerCase() : false;
+	var lastname = req.params.lastname.toLowerCase();	
 	
 	// if both names are provided	
 	if (firstname) {				

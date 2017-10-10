@@ -10,3 +10,7 @@ OR
 Route: GET /players/:lastName  (may return other player with same last name)
 
 e.g. GET https://nba-players.herokuapp.com/players/curry/stephen
+
+e.g. GET https://nba-players.herokuapp.com/players/mcadoo/james_michael
+
+e.g. GET https://nba-players.herokuapp.com/players/ennis_iii/james
