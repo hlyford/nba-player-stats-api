@@ -46,6 +46,7 @@ var getPlayers = function(urlSlug, callback) {
 }
 
 for (var i = 0; i < teamSlugs.length; i++) {
+  console.log(teamSlugs[i]);
 	getPlayers(teamSlugs[i]);
 }
 
