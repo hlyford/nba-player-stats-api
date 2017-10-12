@@ -9,20 +9,22 @@
 	<div class="main-container">
 		<div class="main-content">
 		<h1>NBA headshot API </h1>
-		Easy-to-use API to retrieve NBA player headshot images (png) <br />
+		<h2 style="color: red;">NOW UPDATED FOR 2017-2018 SEASON!</h2>
+		<div style="font-weight: bold;">Easy-to-use API to retrieve NBA player headshot images (png)</div><br />
 
-		Base url: https://nba-players.herokuapp.com/<br />
+		Base url: https://nba-players.herokuapp.com/<br /><br />
 
-		Route: GET /players/:lastName/:firstName   (more specific) <br />
-		OR<br />
-		Route: GET /players/:lastName  (may return other player with same last name) <br />
+		Route: GET <strong>/players/:lastName/:firstName</strong>   (more specific) <br />
+		<i>e.g. GET https://nba-players.herokuapp.com/players/gasol</i> <br />
+		<br />OR<br /><br />
+		Route: GET <strong>/players/:lastName</strong> (may return other player with same last name) <br />
 
-		e.g. GET https://nba-players.herokuapp.com/players/curry/stephen <br />
+		<i>e.g. GET https://nba-players.herokuapp.com/players/curry/stephen <br />
 		e.g. GET https://nba-players.herokuapp.com/players/mcadoo/james_michael <br />
-		e.g. GET https://nba-players.herokuapp.com/players/ennis_iii/james <br />
+		e.g. GET https://nba-players.herokuapp.com/players/ennis_iii/james</i> <br />
 		</div>
 	</div>
 </body>
 	<script src="lib/jquery-2.2.0.min.js"></script>
-  <script src="lib/bootstrap.min.js"></script>  
+  <script src="lib/bootstrap.min.js"></script>
 </html>
