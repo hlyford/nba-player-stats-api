@@ -1,5 +1,5 @@
 # nba-headshot-api
-**UPDATED FOR 2017-2018 SEASON**
+**LAST UPDATED: January 19th, 2018**
 
 Easy-to-use API to retrieve NBA player headshot images (png)
 
