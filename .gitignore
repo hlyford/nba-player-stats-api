@@ -1,4 +1,5 @@
-url-info.js
-node_modules
-.DS_Store
 images
+.DS_Store
+player_data/
+player_data_by_team/
+node_modules
