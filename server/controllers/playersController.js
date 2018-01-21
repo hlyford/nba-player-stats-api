@@ -62,9 +62,7 @@ module.exports = {
 
   getPlayersByTeam: function(teamAcronym, callback) {
     // Pull all players for the team out
-    var playersOnTeam = this.allPlayers.filter(function(player) {
-      player.team_acronym === teamAcronym;
-    });
+    let playersOnTeam = this.allPlayers.filter( player => player.team_acronym === teamAcronym);
     callback(playersOnTeam)
   }
 
