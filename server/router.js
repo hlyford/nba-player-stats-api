@@ -84,7 +84,6 @@ router.get('/players-stats', function(req, res) {
 
 // Get TEAM acronyms
 router.get('/teams', function(req, res) {
-	console.log('ihihi');
 	res.send(playersController.teamAcronyms);
 });
 
