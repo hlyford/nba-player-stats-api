@@ -5,6 +5,7 @@ var Finder = require('fs-finder');
 
 var app = require('./server');
 var helpers = require('./helpers');
+var playersController = require('./controllers/playersController');
 
 var router = express.Router();
 // home page route
@@ -68,9 +69,19 @@ router.get('/players-stats/:lastname/:firstname?', function(req, res){
 
 });
 
+// Prepare all players object
+playersController.prepareAllPlayers();
 
-router.get('/*', function(req, res) {
-	res.redirect('/');
-})
+router.get('/players-stats', function(req, res) {
+	playersController.getAllPlayers(function(players) {
+		res.send(players);
+	})
+
+});
+
+
+// router.get('/*', function(req, res) {
+// 	res.redirect('/');
+// })
 
 module.exports = router;
