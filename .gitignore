@@ -1,6 +1,5 @@
-url-info.js
-node_modules
-images
 .DS_Store
-player_data/
 player_data_by_team/
+node_modules
+npm-debug.log
+hide
