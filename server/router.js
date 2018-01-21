@@ -75,6 +75,7 @@ router.get('/players-stats/:lastname/:firstname?', function(req, res){
 	}
 
 });
+
 // Returns all players
 router.get('/players-stats', function(req, res) {
 	playersController.getAllPlayers(function(players) {
@@ -95,8 +96,9 @@ router.get('/players-stats-teams/:team?', function(req, res) {
 	});
 });
 
-// router.get('/*', function(req, res) {
-// 	res.redirect('/');
-// })
+router.get('/*', function(req, res) {
+	res.redirect('/');
+})
+
 
 module.exports = router;
