@@ -75,8 +75,7 @@ playersController.prepareAllPlayers();
 router.get('/players-stats', function(req, res) {
 	playersController.getAllPlayers(function(players) {
 		res.send(players);
-	})
-
+	});
 });
 
 
