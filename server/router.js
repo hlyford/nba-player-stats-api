@@ -1,6 +1,7 @@
 var express = require('express');
 var path = require('path');
 var fs = require('fs');
+var bodyParser = require('body-parser');
 var Finder = require('fs-finder');
 
 var app = require('./server');
@@ -8,12 +9,18 @@ var helpers = require('./helpers');
 var playersController = require('./controllers/playersController');
 
 var router = express.Router();
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({ extended: true }));
+
 // home page route
 router.get('/', function(req, res){
 	res.sendFile('index');
 });
 
-// player image route
+// Prepare all players object when server starts
+playersController.prepareAllPlayers();
+
+// Player IMAGE route
 router.get('/players/:lastname/:firstname?', function(req, res){
 
 	var firstname = (req.params.firstname) ? req.params.firstname.toLowerCase() : false;
@@ -41,7 +48,7 @@ router.get('/players/:lastname/:firstname?', function(req, res){
 
 });
 
-// Get player data
+// Get player DATA
 router.get('/players-stats/:lastname/:firstname?', function(req, res){
 
 	var firstname = (req.params.firstname) ? req.params.firstname.toLowerCase() : false;
@@ -69,18 +76,26 @@ router.get('/players-stats/:lastname/:firstname?', function(req, res){
 
 });
 
-
-
-// Prepare all players object
-playersController.prepareAllPlayers();
-
+// Returns all players
 router.get('/players-stats', function(req, res) {
 	playersController.getAllPlayers(function(players) {
 		res.send(players);
 	});
-
 });
 
+// Get TEAM acronyms
+router.get('/teams', function(req, res) {
+	console.log('ihihi');
+	res.send(playersController.teamAcronyms);
+});
+
+// Get player data by TEAM
+router.get('/players-stats-teams/:team?', function(req, res) {
+	var teamAcronym = req.params['team'];
+	playersController.getPlayersByTeam(teamAcronym ,function(players) {
+		res.send(players);
+	});
+});
 
 router.get('/*', function(req, res) {
 	res.redirect('/');

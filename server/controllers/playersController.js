@@ -45,6 +45,25 @@ module.exports = {
       that.allPlayers = allPlayers;
       console.log('players in cache');
     }, 5000)
+  },
+
+  teamAcronyms: [
+    'gsw', 'lac', 'lal',
+    'pho', 'sac', 'dal',
+    'hou', 'mem', 'nor',
+    'sas', 'den', 'min',
+    'okc','por','uth',
+    'bos','bro','nyk',
+    'phi','tor','chi',
+    'cle','det','ind',
+    'mil','atl','cha',
+    'mia','orl', 'was'
+  ],
+
+  getPlayersByTeam: function(teamAcronym, callback) {
+    // Pull all players for the team out
+    let playersOnTeam = this.allPlayers.filter( player => player.team_acronym === teamAcronym);
+    callback(playersOnTeam)
   }
 
 
