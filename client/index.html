@@ -18,22 +18,49 @@
 <body>
 	<div class="main-container">
 		<div class="main-content">
-		<h1>NBA headshot API </h1>
-		<h2 style="color: red;">NOW UPDATED FOR 2017-2018 SEASON!</h2>
-		<div style="font-weight: bold;">Date of last update: 12/2/2017</div><br />
+			<h1>NBA Player API</h1>
+			<h2 style="color: red;">NOW UPDATED FOR 2017-2018 SEASON!</h2>
 
-		Base url: https://nba-players.herokuapp.com/<br /><br />
+			<p><strong>LAST UPDATED: January 19th, 2018</strong></p>
 
-		Route: GET <strong>/players/:lastName/:firstName</strong>   (more specific) <br />
-		<i>e.g. GET https://nba-players.herokuapp.com/players/gasol/pau</i> <br />
-		OR<br />
-		Route: GET <strong>/players/:lastName</strong> (may return other player with same last name) <br />
+			<p>Easy-to-use API to retrieve NBA player statistics headshot images (png)</p>
 
-		<i>e.g. GET https://nba-players.herokuapp.com/players/gasol <br /></i>
-    <br />
-    <div>Other examples of names with odd characters or order</div>
-		<i>e.g. GET https://nba-players.herokuapp.com/players/mcadoo/james_michael <br />
-		e.g. GET https://nba-players.herokuapp.com/players/ennis_iii/james</i> <br />
+			<p>Base url: https://nba-players.herokuapp.com/</p>
+			<div class="left">
+
+				<p><strong>Player statistics (returns JSON)</strong></p>
+
+				<p>Get all players:
+				<em>GET /players-stats</em></p>
+
+				<p>Get one player:
+				<em>GET /players-stats/:lastName/:firstName</em></p>
+
+				<p>e.g. GET https://nba-players.herokuapp.com/players-stats/james/lebron</p>
+
+				<p>Get all team acronyms: GET /teams</p>
+
+				<p>Get all players on one team:
+				<em>GET /players-stats-teams/:team</em></p>
+
+				<p>e.g. GET https://nba-players.herokuapp.com/players-stats-teams/cle</p>
+			</div>
+
+			<div class="right">
+				<p><strong>Player images</strong></p>
+
+				<p><em>GET /players/:lastName/:firstName</em>   (more specific)</p>
+
+				<p>OR</p>
+
+				<p><em>GET /players/:lastName</em>  (may return other player with same last name)</p>
+
+				<p>e.g. GET https://nba-players.herokuapp.com/players/curry/stephen</p>
+
+				<p>e.g. GET https://nba-players.herokuapp.com/players/ennis_iii/james</p>
+			</div>
+			<div class="clearfix"></div>
+
 		</div>
 	</div>
 </body>

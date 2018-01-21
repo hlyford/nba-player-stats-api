@@ -17,16 +17,16 @@ var teamSlugs = [
 ];
 
 var teamSlugsStats = [
-// 'gsw', 'lac', 'lal',
-// 'pho', 'sac', 'dal',
-// 'hou', 'mem', 'nor',
-// 'sas', 'den', 'min',
-// 'okc','por','uth',
-// 'bos','bro','nyk',
-// 'phi','tor','chi',
-// 'cle','det','ind',
-// 'mil','atl','cha',
-// 'mia','orl', 'was'
+'gsw', 'lac', 'lal',
+'pho', 'sac', 'dal',
+'hou', 'mem', 'nor',
+'sas', 'den', 'min',
+'okc','por','uth',
+'bos','bro','nyk',
+'phi','tor','chi',
+'cle','det','ind',
+'mil','atl','cha',
+'mia','orl', 'was'
 ];
 
 exports.teamSlugs = teamSlugs;
