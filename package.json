@@ -7,7 +7,7 @@
     "start": "node_modules/.bin/nodemon server/server.js",
     "test": "echo \"Error: no tests specified\" && exit 1",
     "scrape": "node scraper.js",
-    "scrape-stats": "node statsScraper.js"
+    "scrape-stats": "node scripts/statsScraper.js"
   },
   "author": "Henry Lyford",
   "license": "ISC",
@@ -29,6 +29,6 @@
     "nodemon": "1.11.0"
   },
   "engines": {
-    "node": "6.12.2"
+    "node": "v9.4.0"
   }
 }
