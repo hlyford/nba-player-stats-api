@@ -16,8 +16,8 @@ module.exports = {
 
       fs.readdir(dirname, function(err, filenames) {
         if (err) {
+          console.log(err);
           onError(err);
-          return;
         }
 
         filenames.forEach(function(filename) {
@@ -32,7 +32,7 @@ module.exports = {
       });
     }
 
-    readFiles('./player_data', function(filename, content) {
+    readFiles('player_data', function(filename, content) {
       allPlayers.push(content);
     }, function(err) {
       // console.log(err);

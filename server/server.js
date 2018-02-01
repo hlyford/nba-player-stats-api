@@ -18,6 +18,6 @@ app.use(express.static(path.join(__dirname, "/../client")));
 app.use('/', router);
 
 app.listen(port);
-console.log('Rent app listening on ' + port);
+console.log('NBA stats app listening on ' + port);
 
 module.exports.app = app;
